@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		24C268062F293F5000C705FB /* DetailsView 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 24C268052F293F5000C705FB /* DetailsView 2.jpeg */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		248577222F2383D10092ECB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		248577142F2383CF0092ECB7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		248577212F2383D10092ECB7 /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485772B2F2383D10092ECB7 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C268052F293F5000C705FB /* DetailsView 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DetailsView 2.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +84,7 @@
 				248577242F2383D10092ECB7 /* WeatherAppTests */,
 				2485772E2F2383D10092ECB7 /* WeatherAppUITests */,
 				248577152F2383CF0092ECB7 /* Products */,
+				24C268052F293F5000C705FB /* DetailsView 2.jpeg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C268062F293F5000C705FB /* DetailsView 2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
