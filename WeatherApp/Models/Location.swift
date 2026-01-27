@@ -12,6 +12,8 @@ struct Location: Identifiable {
     let name: String
     let weather: Weather
     let temperature: Temperature
+    let latitude: Double
+    let longitude: Double 
     
 }
 

@@ -16,43 +16,43 @@ struct ListView: View {
             ZStack {
                 Color("backgroundColor", bundle: nil).ignoresSafeArea()
                 
-                List{
-                        ForEach(viewModel.filteredLocations){ location in
-                                NavigationLink(destination: DetailView(location: location)){
-                                            
-                                            HStack{
-                                                Text(location.name)
-                                                    .font(.headline)
-                                                    .foregroundStyle(Color.white)
-                                                
-                                                Spacer()
-                                                
-                                                Image(systemName: location.weather.icon)
-                                                    .foregroundColor(.yellow)
-                                                
-                                            }
-                                        }.listRowBackground(Color.clear)
-                                            .frame(height: 60)
-                                            
-                                        }
-                                }
-                                .navigationBarBackButtonHidden(true)
-                                .toolbar(content: {
-                                    ToolbarItem(placement: .topBarLeading) {
-                                        Button{
-                                            dismiss()
-                                        } label: {
-                                            Image(systemName: "chevron.backward")
-                                                .foregroundStyle(.white)
-                                        }
-                                    }
-                                    
-                                    ToolbarItem(placement: .principal) {
-                                        Text("Locations").foregroundColor(.white)
-                                    }
-                                })
-                                .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search location or city")
-            }.scrollContentBackground(.hidden)
+                List {
+                    ForEach(viewModel.filteredLocations) { location in
+                        NavigationLink(destination: DetailView(location: location, weatherService: WeatherService(networkService: HttpNetworking()))) {
+                            
+                            HStack {
+                                Text(location.name)
+                                    .font(.headline)
+                                    .foregroundStyle(Color.white)
+                                
+                                Spacer()
+                                
+                                Image(systemName: location.weather.icon)
+                                    .foregroundColor(.yellow)
+                            }
+                        }
+                        .listRowBackground(Color.clear)
+                        .frame(height: 60)
+                    }
+                }
+                .navigationBarBackButtonHidden(true)
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "chevron.backward")
+                                .foregroundStyle(.white)
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .principal) {
+                        Text("Locations").foregroundColor(.white)
+                    }
+                })
+                .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search location or city")
+            }
+            .scrollContentBackground(.hidden)
         }
     }
 }
@@ -60,4 +60,3 @@ struct ListView: View {
 #Preview {
     ListView()
 }
-
