@@ -1,3 +1,10 @@
+//
+//  README.md
+//  WeatherApp
+//
+//  Created by rentamac on 1/27/26.
+//
+
 # WheatherApp
 
 A concise Swift/Xcode project that demonstrates modern Apple platform development.
@@ -36,5 +43,3 @@ This repository contains an Xcode project built with Swift. It is structured to 
 - Xcode 26.0 or later
 - Swift 6.x
 - iOS 17+ (adjust as needed)
-
- 
