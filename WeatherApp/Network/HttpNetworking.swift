@@ -21,6 +21,7 @@ class HttpNetworking : Networking {
             throw URLError(.badServerResponse)
         }
         
+        print(data)
         return try JSONDecoder().decode(T.self, from: data)
     }
         

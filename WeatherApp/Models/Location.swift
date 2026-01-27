@@ -13,8 +13,7 @@ struct Location: Identifiable {
     let weather: Weather
     let temperature: Temperature
     let latitude: Double
-    let longitude: Double 
-    
+    let longitude: Double
 }
 
 enum Weather {

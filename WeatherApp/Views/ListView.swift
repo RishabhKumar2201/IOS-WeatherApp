@@ -11,12 +11,12 @@ struct ListView: View {
                 
                 List {
                     ForEach(viewModel.filteredLocations) { location in
-                        NavigationLink(destination: DetailView(location: location, weatherService: WeatherService(networkService: HttpNetworking()))) {
+                        NavigationLink(destination: DetailView(location: location, weatherService: WeatherService(networkService: HttpNetworking()))){
                             HStack {
                                 Text(location.name)
                                     .font(.headline)
                                     .foregroundStyle(Color.white)
-                                
+//
                                 Spacer()
                                 
                                 Image(systemName: location.weather.icon)

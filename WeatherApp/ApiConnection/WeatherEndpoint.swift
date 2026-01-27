@@ -23,7 +23,7 @@ struct WeatherEndpoint : ApiEndpoint {
         [
             URLQueryItem(name: "latitude", value: "\(request.latitude)"),
             URLQueryItem(name: "longitude", value: "\(request.longitude)"),
-            URLQueryItem(name: "current", value: "temperature_2m,weather_code")            
+            URLQueryItem(name: "current", value: "temperature_2m,relative_humidity_2m,wind_speed_10m,cloud_cover,wind_direction_10m,weather_code")      
         ]
     }
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-// MARK: - WeatheResponse
+// MARK: - WeatherResponse
 struct WeatherResponse: Codable {
     let latitude, longitude, generationtimeMS: Double
     let utcOffsetSeconds: Int
     let timezone, timezoneAbbreviation: String
-    let elevation: Int
+    let elevation: Double
     let currentUnits: CurrentUnits
     let current: Current
 
@@ -33,22 +33,40 @@ struct Current: Codable {
     let time: String
     let interval: Int
     let temperature2M: Double
-    let weatherCode: Int
+    let relativeHumidity2M: Int
+    let windSpeed10M: Double
+    let cloudCover: Int
+    let windDirection10M: Int
+    let weatherCode: Int           // ✅ NOW PRESENT IN API RESPONSE
 
     enum CodingKeys: String, CodingKey {
         case time, interval
         case temperature2M = "temperature_2m"
-        case weatherCode = "weather_code"
+        case relativeHumidity2M = "relative_humidity_2m"
+        case windSpeed10M = "wind_speed_10m"
+        case cloudCover = "cloud_cover"
+        case windDirection10M = "wind_direction_10m"
+        case weatherCode = "weather_code"     // ✅ Added back
     }
 }
 
 // MARK: - CurrentUnits
 struct CurrentUnits: Codable {
-    let time, interval, temperature2M, weatherCode: String
+    let time, interval: String
+    let temperature2M: String
+    let relativeHumidity2M: String
+    let windSpeed10M: String
+    let cloudCover: String
+    let windDirection10M: String
+    let weatherCode: String        // ✅ NOW PRESENT IN API RESPONSE ("wmo code")
 
     enum CodingKeys: String, CodingKey {
         case time, interval
         case temperature2M = "temperature_2m"
-        case weatherCode = "weather_code"
+        case relativeHumidity2M = "relative_humidity_2m"
+        case windSpeed10M = "wind_speed_10m"
+        case cloudCover = "cloud_cover"
+        case windDirection10M = "wind_direction_10m"
+        case weatherCode = "weather_code"     // ✅ Added back
     }
 }
