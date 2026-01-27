@@ -1,5 +1,6 @@
 import SwiftUI
 struct DetailView: View {
+<<<<<<< HEAD
     
     let location: Location
     let weatherService: WeatherServiceProtocol
@@ -8,11 +9,17 @@ struct DetailView: View {
     @State private var isLoading = false
     @State private var error: Error?
     
+=======
+
+    var location: Location
+
+>>>>>>> main
     var body: some View {
         NavigationStack {
             ZStack {
                 Color("backgroundColor", bundle: nil)
                     .ignoresSafeArea()
+<<<<<<< HEAD
                 
                
                 if isLoading {
@@ -30,6 +37,36 @@ struct DetailView: View {
                 } else {
               
                     originalStaticView()
+=======
+
+                VStack {
+
+                    Text(location.name)
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+
+                    Image(systemName: location.weather.icon)
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .foregroundStyle(.yellow)
+
+                    Text(location.temperature.temperatureText)
+                        .font(.title)
+                        .foregroundStyle(.gray)
+
+                    Spacer()
+
+                    HStack {
+                        Text(
+                            "A warm breeze drifted through tge streets as the afternoon sun hovered behind a veil of scattered clouds. In the north, the air felt dry abd dusty, while the southern coast carried the familiar scent of moisture from the sea. Somewhere in the distance, dark monsoon clouds gathered slowly, hinting at an evening shower that would cool the earth and fill the air with the sound of rain tapping on the rooftops."
+                        )
+                        .font(.title3)
+                        .foregroundStyle(.white)
+                        .padding()
+                    }
+
+                    Spacer()
+>>>>>>> main
                 }
             }
 //            .padding(25)
@@ -122,9 +159,18 @@ struct DetailView: View {
 }
 
 #Preview {
+<<<<<<< HEAD
    
     DetailView(
         location: Location(name: "Mumbai", weather: .sunny, temperature: Temperature(min: 20, max: 25), latitude: 18.9582, longitude: 72.8358),
         weatherService: WeatherService(networkService: HttpNetworking())
+=======
+    DetailView(
+        location: Location(
+            name: "Mumbai",
+            weather: .sunny,
+            temperature: Temperature(min: 20, max: 25)
+        )
+>>>>>>> main
     )
 }
