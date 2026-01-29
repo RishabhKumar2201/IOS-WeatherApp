@@ -37,7 +37,7 @@ struct Current: Codable {
     let windSpeed10M: Double
     let cloudCover: Int
     let windDirection10M: Int
-    let weatherCode: Int           // ✅ NOW PRESENT IN API RESPONSE
+    let weatherCode: Int
 
     enum CodingKeys: String, CodingKey {
         case time, interval
@@ -46,7 +46,7 @@ struct Current: Codable {
         case windSpeed10M = "wind_speed_10m"
         case cloudCover = "cloud_cover"
         case windDirection10M = "wind_direction_10m"
-        case weatherCode = "weather_code"     // ✅ Added back
+        case weatherCode = "weather_code"
     }
 }
 
@@ -58,7 +58,7 @@ struct CurrentUnits: Codable {
     let windSpeed10M: String
     let cloudCover: String
     let windDirection10M: String
-    let weatherCode: String        // ✅ NOW PRESENT IN API RESPONSE ("wmo code")
+    let weatherCode: String
 
     enum CodingKeys: String, CodingKey {
         case time, interval
@@ -67,6 +67,6 @@ struct CurrentUnits: Codable {
         case windSpeed10M = "wind_speed_10m"
         case cloudCover = "cloud_cover"
         case windDirection10M = "wind_direction_10m"
-        case weatherCode = "weather_code"     // ✅ Added back
+        case weatherCode = "weather_code"     
     }
 }
