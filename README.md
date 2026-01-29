@@ -18,7 +18,7 @@ This repository contains an Xcode project built with Swift. It is structured to 
 
 - **Launch Screen**
 
-<img src="LandingPage.png" width="400" alt="LandingView Page ">
+<img src="Launch Screen.png" width="400" alt="LandingView Page ">
 
 - **Landing Page (List View)**
 
