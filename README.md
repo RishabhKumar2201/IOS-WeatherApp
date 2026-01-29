@@ -16,6 +16,10 @@ This repository contains an Xcode project built with Swift. It is structured to 
 
 ## Screenshots
 
+- **Launch Screen**
+
+<img src="LandingPage.png" width="400" alt="LandingView Page ">
+
 - **Landing Page (List View)**
 
 <img src="LandingPage.jpeg" width="400" alt="LandingView Page ">
@@ -24,11 +28,13 @@ This repository contains an Xcode project built with Swift. It is structured to 
 
 <img src="ListView.jpeg" width="400" alt="ListView Page">
 
-- **DetailsView Page**
+- **DetailsView Page (With Live data from API)**
 
-<img src="DetailsView.jpeg" width="400" alt="DetailsView Page">
+<img src="Live Data.png" width="400" alt="DetailsView Page">
 
+- **DetailsView Page (With Saved Data)**
 
+<img src="Core Data.png" width="400" alt="DetailsView Page">
 
 
 ## Requirements

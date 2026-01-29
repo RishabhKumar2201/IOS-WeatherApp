@@ -25,11 +25,25 @@ struct DetailView: View {
                         .foregroundStyle(.white)
                         .padding()
                 } else if let weather = weatherResponse {
-                    realTimeWeatherView(weather: weather, location: location)
+//                    realTimeWeatherView(weather: weather, location: location)
+                    
+                    realTimeWeatherView(
+                        weather: weather,
+                        location: location,
+                        dataSource: dataSource,
+                        onForceRefresh: {
+                            Task {
+                                await forceFetchFromAPI()
+                            }
+                        }
+                    )
+
+                    
                     if let source = dataSource {
-                        Text(source == .api ? "Live Data • API" : "Offline Data • Core Data")
-                            .font(.caption)
+                        Text(source == .api ? "Live Data • API" : "Offline Data")
+                            .font(.default)
                             .foregroundStyle(source == .api ? .green : .orange)
+                            
                     }
 
                 } else {
@@ -67,59 +81,32 @@ struct DetailView: View {
         }
     }
     
-//    func fetchWeather() async {
-//        isLoading = true
-//        error = nil
-//        do {
-//            weatherResponse = try await weatherService.fetchWeather(
-//                latitude: location.latitude,
-//                longitude: location.longitude
-//            )
-//        } catch {
-//            self.error = error
-//        }
-//        isLoading = false
-//    }
-    
-//    func fetchWeather() async {
-//        isLoading = true
-//        error = nil
-//        
-//        let persistence = PersistenceController.shared
-//        
-//        // 1️⃣ Check Core Data first
-//        if let cached = persistence.fetchCachedWeather(
-//            latitude: location.latitude,
-//            longitude: location.longitude
-//        ),
-//        persistence.isCacheValid(cached) {
-//            
-//            weatherResponse = cached.toWeatherResponse()
-//            isLoading = false
-//            return
-//        }
-//        
-//        // 2️⃣ Fetch from API
-//        do {
-//            let freshWeather = try await weatherService.fetchWeather(
-//                latitude: location.latitude,
-//                longitude: location.longitude
-//            )
-//            
-//            weatherResponse = freshWeather
-//            
-//            // 3️⃣ Save to Core Data
-//            persistence.saveWeather(
-//                location: location,
-//                weather: freshWeather
-//            )
-//            
-//        } catch {
-//            self.error = error
-//        }
-//        
-//        isLoading = false
-//    }
+    func forceFetchFromAPI() async {
+        isLoading = true
+        error = nil
+        
+        do {
+            print("USER FORCED API REFRESH")
+            
+            let freshWeather = try await weatherService.fetchWeather(
+                latitude: location.latitude,
+                longitude: location.longitude
+            )
+            
+            weatherResponse = freshWeather
+            dataSource = .api
+            
+            PersistenceController.shared.saveWeather(
+                location: location,
+                weather: freshWeather
+            )
+            
+        } catch {
+            self.error = error
+        }
+        
+        isLoading = false
+    }
     
     func fetchWeather() async {
         isLoading = true
@@ -133,7 +120,7 @@ struct DetailView: View {
         ),
         persistence.isCacheValid(cached) {
             
-            print("📦 DATA FROM CORE DATA")
+            print("DATA FROM CORE DATA")
             weatherResponse = cached.toWeatherResponse()
             dataSource = .coreData
             isLoading = false
@@ -141,7 +128,7 @@ struct DetailView: View {
         }
         
         do {
-            print("🌐 DATA FROM API")
+            print("DATA FROM API")
             let freshWeather = try await weatherService.fetchWeather(
                 latitude: location.latitude,
                 longitude: location.longitude

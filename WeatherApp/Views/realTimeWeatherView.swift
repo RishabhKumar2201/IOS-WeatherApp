@@ -12,8 +12,11 @@ struct realTimeWeatherView: View {
     let weather: WeatherResponse
     let location: Location
     
+    let dataSource: WeatherDataSource?
+    let onForceRefresh: () -> Void
+    
     var body: some View {
-        VStack(spacing: 25) {
+        VStack(spacing: 17) {
             Image(systemName: weatherCodeToIcon(weather.current.weatherCode))
                 .resizable()
                 .frame(width: 200, height: 200)
@@ -27,6 +30,27 @@ struct realTimeWeatherView: View {
             Text("Real-time weather")
                 .font(.title2)
                 .foregroundStyle(.gray)
+            
+            if dataSource == .coreData {
+//                Text("Showing cached data")
+//                    .font(.caption)
+//                    .foregroundStyle(.orange)
+
+                Button {
+                    onForceRefresh()
+                } label: {
+                    Text("Refresh from API")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.blue)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .padding(.horizontal, 100)
+                .padding(.top, 70)
+            }
+
             
             Spacer()
             
