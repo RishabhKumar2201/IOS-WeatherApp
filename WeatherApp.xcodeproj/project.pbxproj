@@ -597,6 +597,8 @@
 		};
 		24C269152F2B576B00C705FB /* Debug(Dev) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Dev.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -755,6 +757,8 @@
 		};
 		24C269192F2B578300C705FB /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Staging.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -913,6 +917,8 @@
 		};
 		24C2691D2F2B579900C705FB /* Debug(Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Production.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1071,6 +1077,8 @@
 		};
 		24C269212F2B57AA00C705FB /* Release(Dev) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Dev.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1219,6 +1227,8 @@
 		};
 		24C269252F2B57B900C705FB /* Release(Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Staging.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1367,6 +1377,8 @@
 		};
 		24C269292F2B57C700C705FB /* Release(Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 248577162F2383CF0092ECB7 /* WeatherApp */;
+			baseConfigurationReferenceRelativePath = Configuration/Production.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

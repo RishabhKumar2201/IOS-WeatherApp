@@ -1,0 +1,13 @@
+//
+//  Dev.xcconfig
+//  WeatherApp
+//
+//  Created by rentamac on 1/29/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// 
+	
+
+baseURL = api.open-meteo.com
+path = /v1/forecast

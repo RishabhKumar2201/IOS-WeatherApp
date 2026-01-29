@@ -20,6 +20,9 @@ final class WeatherService: WeatherServiceProtocol {
     }
     
     func fetchWeather(latitude: Double, longitude: Double) async throws -> WeatherResponse {
+        
+        print("\(FetchingAPI.baseURL)")
+        
         let request = WeatherRequest(latitude: latitude, longitude: longitude)
         
         let endpoint = WeatherEndpoint(request: request)

@@ -1,0 +1,13 @@
+//
+//  Staging.xcconfig
+//  WeatherApp
+//
+//  Created by rentamac on 1/29/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+
+baseURL = api.open-meteostaging
+path = /v1/forecast

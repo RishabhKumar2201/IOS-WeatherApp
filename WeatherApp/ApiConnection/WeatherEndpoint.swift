@@ -12,11 +12,13 @@ struct WeatherEndpoint : ApiEndpoint {
     let request: WeatherRequest
     
     var baseURL: String {
-        "https://api.open-meteo.com"
+        "https://\(FetchingAPI.baseURL)"
+//        "https://api.open-meteo.com"
     }
     
     var path: String {
-        "/v1/forecast"
+        FetchingAPI.path
+//        "/v1/forecast"
     }
     
     var queryItems: [URLQueryItem] {
