@@ -32,7 +32,7 @@ This repository contains an Xcode project built with Swift. It is structured to 
 
 <img src="Live Data.png" width="400" alt="DetailsView Page">
 
-- **DetailsView Page (With Saved Data)**
+- **DetailsView Page (With Saved Data and Refresh Button)**
 
 <img src="Core Data.png" width="400" alt="DetailsView Page">
 
