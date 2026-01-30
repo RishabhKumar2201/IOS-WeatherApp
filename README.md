@@ -36,6 +36,21 @@ This repository contains an Xcode project built with Swift. It is structured to 
 
 <img src="Core Data.png" width="400" alt="DetailsView Page">
 
+- **ListView Page (With Add Location Button)**
+
+<img src="Add Button.png" width="400" alt="DetailsView Page">
+
+- **ListView Page (User Input Field For Add Button)**
+
+<img src="User input field.png" width="400" alt="DetailsView Page">
+
+- **ListView Page (With updated list of locations)**
+
+<img src="Added Location.png" width="400" alt="DetailsView Page">
+
+- **DetailView Page (With live data of added location)**
+
+<img src="Real Data.png" width="400" alt="DetailsView Page">
 
 ## Requirements
 
